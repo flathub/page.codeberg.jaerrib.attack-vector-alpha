@@ -19,12 +19,12 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/jaerrib/attack-vector-alpha.git
-        commit: 87c77cf198e9b6f745b338ad3e72ffd1f7dcfaa6
+        commit: 91187333de184066dae48d329a6eaef4ae2a62d6
 
       - type: file
-        url: https://codeberg.org/jaerrib/attack-vector-alpha/releases/download/1.1/Attack_Vector_Alpha_1-1.pck
+        url: https://codeberg.org/jaerrib/attack-vector-alpha/releases/download/1.2/Attack_Vector_Alpha_1-2.pck
         dest-filename: Attack_Vector_Alpha.pck
-        sha256: 89b4dd5c4df7196e8d5cb33a047b8db87939cb80352cf6bee6b3a99c4290d8f0
+        sha256: 3345b536ab7757abd241ae41ff71c1dcbc2554ac43ce93176f18d62be724fde0
 
     build-commands:
       - install -Dm644 Attack_Vector_Alpha.pck ${FLATPAK_DEST}/bin/godot-runner.pck
