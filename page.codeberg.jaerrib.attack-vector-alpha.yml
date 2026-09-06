@@ -10,7 +10,9 @@ finish-args:
   - --share=ipc
   - --socket=x11
   - --socket=pulseaudio
-  - --device=all
+  - --device=dri
+  - --device=input
+  - --require-version=1.16.0
 
 modules:
   - name: attackvectoralpha
@@ -19,10 +21,11 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/jaerrib/attack-vector-alpha.git
-        commit: 91187333de184066dae48d329a6eaef4ae2a62d6
+        tag: 1.2.1
+        commit: 40e5a8a92f235bdd29151fefbb85aad233ba7633
 
       - type: file
-        url: https://codeberg.org/jaerrib/attack-vector-alpha/releases/download/1.2/Attack_Vector_Alpha_1-2.pck
+        url: https://codeberg.org/jaerrib/attack-vector-alpha/releases/download/1.2.1/Attack_Vector_Alpha_1-2-1.pck
         dest-filename: Attack_Vector_Alpha.pck
         sha256: 3345b536ab7757abd241ae41ff71c1dcbc2554ac43ce93176f18d62be724fde0
 
@@ -31,3 +34,4 @@ modules:
       - install -Dm644 ${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 ${FLATPAK_ID}.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 ${FLATPAK_ID}.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
+
