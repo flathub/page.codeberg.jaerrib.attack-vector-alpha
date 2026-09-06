@@ -12,6 +12,7 @@ finish-args:
   - --socket=pulseaudio
   - --device=dri
   - --device=input
+  - --require-version=1.16.0
 
 modules:
   - name: attackvectoralpha
